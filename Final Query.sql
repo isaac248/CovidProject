@@ -7,23 +7,22 @@ ORDER BY 3,4
 --FROM CovidProject..CovidVaccinations
 --ORDER BY 3,4
 
---Select Data that we are going to be using
-
+--Selecting Data that will be used
 SELECT location, date, total_cases, new_cases, total_deaths, population
 FROM CovidProject..CovidDeaths
 ORDER BY 1,2
 --location and date
 
 
---looking at total cases vs total deaths
---likelihood of dying if you contract COVID in United States
+--Looking at total cases vs total deaths
+--Likelihood of dying if you contract COVID in United States
 SELECT location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 FROM CovidProject..CovidDeaths
 WHERE location like '%states%'
 ORDER BY 1,2
 
 --Looking at total cases vs population
---Percentage of population got COVID
+--Percentage of population that contracted COVID
 SELECT location, date, population, total_cases, (total_cases/population)*100 as InfectionPercentage
 FROM CovidProject..CovidDeaths
 WHERE location like '%states%'
