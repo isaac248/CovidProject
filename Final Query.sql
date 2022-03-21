@@ -158,4 +158,5 @@ WHERE continent is NOT null
 GROUP BY location
 ORDER BY TotalDeath desc
 
-
+--Viz on Tableau
+--https://public.tableau.com/app/profile/isaac.lorenzo#!/?newProfile=&activeTab=0
